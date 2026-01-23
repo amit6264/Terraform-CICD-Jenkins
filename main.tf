@@ -1,0 +1,11 @@
+provider "aws" {
+  region = "eu-north-1"
+}
+
+resource "aws_instance" "dev" {
+    ami = "ami-0f88e80871fd81e91"
+    instance_type = "t3.micro"
+    tags = {
+      Name = "dev"
+    }
+}
